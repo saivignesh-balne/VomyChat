@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interview Results</h1>
+            <p>Position: <span id="resultPosition"></span></p>
+        </header>
+
+        <main>
+            <div id="summarySection">
+                <h2>Overall Evaluation</h2>
+                <div class="score-container">
+                    <div class="score-circle">
+                        <span id="overallScore">0</span>/10
+                    </div>
+                    <div id="recommendation"></div>
+                </div>
+                
+                <div class="feedback-section">
+                    <h3>Strengths</h3>
+                    <ul id="strengthsList"></ul>
+                    
+                    <h3>Areas for Improvement</h3>
+                    <ul id="improvementsList"></ul>
+                    
+                    <h3>Skills to Develop</h3>
+                    <ul id="skillsList"></ul>
+                </div>
+            </div>
+
+            <div id="detailedResponses">
+                <h2>Question-by-Question Feedback</h2>
+                <div id="responsesContainer"></div>
+            </div>
+
+            <div class="actions">
+                <button id="downloadBtn">Download Full Report</button>
+                <button id="newInterviewBtn">Start New Interview</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const interviewResults = JSON.parse('{{ results|tojson }}');
+    </script>
+    <script src="{{ url_for('static', filename='js/results.js') }}"></script>
+</body>
+</html>

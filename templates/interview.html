@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Session</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>{{ position }} Interview</h1>
+            <p>With {{ interviewer.name }}</p>
+            <div class="progress">
+                Question {{ current_q + 1 }} of {{ questions|length }}
+            </div>
+        </header>
+        
+        <main>
+            <div class="question-card">
+                <h2>{{ questions[current_q] }}</h2>
+                <textarea id="answerInput" placeholder="Type your answer here..."></textarea>
+                <div class="actions">
+                    <button id="submitBtn" class="btn">Submit Answer</button>
+                </div>
+                <div id="errorMsg" class="error"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/interview.js') }}"></script>
+</body>
+</html>

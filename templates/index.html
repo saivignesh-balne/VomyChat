@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Interview Platform</h1>
+            <p>Practice with AI-powered interviews</p>
+        </header>
+
+        <main>
+            <form id="interviewForm">
+                <div class="form-group">
+                    <label for="position">Select Job Position*</label>
+                    <select id="position" name="position" required>
+                        <option value="">-- Select a position --</option>
+                        {% for position in positions %}
+                        <option value="{{ position }}">{{ position }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="interviewer">Interviewer Style</label>
+                    <select id="interviewer" name="interviewer">
+                        {% for interviewer, profile in interviewers.items() %}
+                        <option value="{{ interviewer }}">{{ interviewer|capitalize }} ({{ profile.style }})</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="resume">Upload Resume (Optional)</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.docx,.txt">
+                    <small>PDF, DOCX, or TXT files only</small>
+                </div>
+
+                <button type="submit" id="startBtn">Start Interview</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
