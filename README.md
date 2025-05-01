@@ -12,7 +12,7 @@ Thank you for the clarification. Based on the information provided, here's an up
 - **Resume Analysis**: Upload your resume to receive tailored questions and feedback.
 - **Real-Time Feedback**: Get instant evaluations on your responses to improve performance.
 - **Customizable Interview Settings**: Choose interview types, difficulty levels, and specific topics.
-- **User-Friendly Interface**: Navigate easily through the intuitive and responsive design. ([amoljagadambe/ai_interviewer: POC based on Chat GPT ... - GitHub](https://github.com/amoljagadambe/ai_interviewer?utm_source=chatgpt.com), [jiatastic/GPTInterviewer: GPT Interviewer - Practice interview with AI ...](https://github.com/jiatastic/GPTInterviewer?utm_source=chatgpt.com))
+- **User-Friendly Interface**: Navigate easily through the intuitive and responsive design.
 
 ## Tech Stack
 
@@ -23,11 +23,8 @@ Thank you for the clarification. Based on the information provided, here's an up
 - **Backend**:
   - Python (Flask)
 - **AI & NLP**:
-  - OpenAI's GPT models
+  - Together Api
   - Resume parsing libraries
-- **Others**:
-  - SQLite for data storage
-  - Docker for containerization ([Candidates Using AI Assistants in Interviews : r/devops - Reddit](https://www.reddit.com/r/devops/comments/1g3np7t/candidates_using_ai_assistants_in_interviews/?utm_source=chatgpt.com))
 
 ## Installation
 
@@ -102,11 +99,3 @@ VomyChat/
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to customize this `README.md` further to align with the specific functionalities and features of your project. 
