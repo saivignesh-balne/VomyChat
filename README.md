@@ -6,6 +6,9 @@ Thank you for the clarification. Based on the information provided, here's an up
 
 **VomyChat** is an AI-driven interview simulation platform designed to help job seekers prepare for interviews through realistic, interactive sessions. Leveraging advanced natural language processing, VomyChat conducts mock interviews, evaluates responses, and provides constructive feedback to enhance your interview skills.
 
+![VomyChat Banner](static/output.jpg)
+
+
 ## Features
 
 - **Interactive Mock Interviews**: Engage in simulated interviews that mimic real-world scenarios.
